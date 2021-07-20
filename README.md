@@ -6,7 +6,7 @@ An array list implementation made in C# with OOP.
 
   <sup>Source: Wikipedia.</sup>
 - The array list uses a zero-based indexing system i.e the first item is at index 0. 
-- There is an examples.cs file and what is contained is fairly self-explanatory.
+- There is an Examples.cs file and what is contained is fairly self-explanatory.
 
 This is just meant to be a little project as I slowly learn C#.
 
