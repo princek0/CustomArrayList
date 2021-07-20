@@ -1,5 +1,5 @@
 # CustomArrayList
-An array list made in C# with OOP. 
+An array list implementation made in C# with OOP. 
 
 This is just meant to be a little project as I slowly learn C#. 
 
