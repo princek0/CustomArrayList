@@ -132,4 +132,8 @@ public class ArrayList
         }
         return this.RemoveAt((int)index);
     } 
+    public int Size()
+    {
+        return this.length;
+    }
 }
