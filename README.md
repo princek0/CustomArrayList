@@ -1,11 +1,16 @@
 # CustomArrayList
+
 An array list implementation made in C# with OOP.
 
 - In computer science, a dynamic array, growable array, resizable array, dynamic table, mutable array, or array list is a random access, variable-size list data structure that allows elements to be added or removed. It is supplied with standard libraries in many modern mainstream programming languages. Dynamic arrays overcome a limit of static arrays, which have a fixed capacity that needs to be specified at allocation. 
 
   <sup>Source: Wikipedia.</sup>
+- The array list uses a zero-based indexing system i.e the first item is at index 0. 
+- There is an examples.cs file and what is contained is fairly self-explanatory.
 
-This is just meant to be a little project as I slowly learn C#. 
+This is just meant to be a little project as I slowly learn C#.
+
+NOTE: It is NOT fully finished.
 
 Methods
 --------
