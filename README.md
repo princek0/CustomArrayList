@@ -10,8 +10,6 @@ An array list implementation made in C# with OOP.
 
 This is just meant to be a little project as I slowly learn C#.
 
-NOTE: It is NOT fully finished.
-
 Methods
 --------
 - .ToString() -> Outputs the array list.
