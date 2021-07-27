@@ -1,30 +1,30 @@
-public class ArrayList
+public class ArrayList<T>
 {
     private int length;
-    private string[] items;
+    private T[] items;
     public ArrayList()
     {
         this.length = 0;
-        this.items = new string[32];
+        this.items = new T[32];
     }
     public ArrayList(int startSize)
     {
         this.length = 0;
         if (startSize > 32)
         {
-            this.items = new string[startSize];
+            this.items = new T[startSize];
         } 
         else 
         {
-            this.items = new string[32];
+            this.items = new T[32];
         }
     }
-    public ArrayList(string[] startItems)
+    public ArrayList(T[] startItems)
     {
         this.length = startItems.Length;
         if (startItems.Length < 32)
         {
-            string[] temp = new string[32];
+            T[] temp = new T[32];
             for (int i = 0; i < startItems.Length; i++)
             {
                 temp[i] = startItems[i];
@@ -41,7 +41,7 @@ public class ArrayList
         string output = "[";
         for (int i = 0; i < this.length; i++)
         {
-            output += this.items[i];
+            output += this.items[i].ToString();
             if (i != this.length-1)
             {
             output += ", ";
@@ -50,11 +50,11 @@ public class ArrayList
         output += "]";
         return output;
     }
-    public void Append(string item)
+    public void Append(T item)
     {
         if (this.length == this.items.Length)
         {
-            string[] temp = new string[this.items.Length*2];
+            T[] temp = new T[this.items.Length*2];
             for (int i = 0; i < this.items.Length; i++)
             {
                 temp[i] = this.items[i];
@@ -65,29 +65,29 @@ public class ArrayList
         this.items[this.length++] = item;
         
     }
-    public bool Contains(string item)
+    public bool Contains(T item)
     {
         for (int i = 0; i < this.length; i++)
         {
-            if (item == this.items[i])
+            if (item.Equals(this.items[i]))
             {
                 return true;
             }
         }
         return false;
     }
-    public int? IndexOf(string item)
+    public int? IndexOf(T item)
     {
         for (int i = 0; i < this.length; i++)
         {
-            if (item == this.items[i])
+            if (item.Equals(this.items[i]))
             {
                 return i;
             }
         }
         return null;
     }
-    public bool Insert(string item, int index)
+    public bool Insert(T item, int index)
     {
         if ((index < 0) || (index > this.length))
         {
@@ -95,7 +95,7 @@ public class ArrayList
         }
         if (this.length == this.items.Length)
         {
-            string[] temp = new string[this.items.Length*2];
+            T[] temp = new T[this.items.Length*2];
             for (int i = 0; i < this.items.Length; i++)
             {
                 temp[i] = this.items[i];
@@ -123,7 +123,7 @@ public class ArrayList
         this.length--;
         return true;
     }
-    public bool Remove(string item)
+    public bool Remove(T item)
     {
         int? index = this.IndexOf(item);
         if (!index.HasValue)
@@ -135,5 +135,10 @@ public class ArrayList
     public int Size()
     {
         return this.length;
+    }
+
+    public T[] GetItems()
+    {
+        return this.items;
     }
 }
