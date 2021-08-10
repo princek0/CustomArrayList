@@ -37,7 +37,20 @@ public class ArrayList<T>
             this.items = startItems;
         }
     }
-
+        public override string ToString()
+    {
+        string output = "[";
+        for (int i = 0; i < this.length; i++)
+        {
+            output += this.items[i];
+            if (i != this.length-1)
+            {
+            output += ", ";
+            }
+        }
+        output += "]";
+        return output;
+    }
     public void Append(T item)
     {
         if (this.length == this.items.Length)
@@ -127,20 +140,6 @@ public class ArrayList<T>
             return false;
         }
         return this.RemoveAt((int)index);
-    }
-    public override string ToString()
-    {
-        string output = "[";
-        for (int i = 0; i < this.length; i++)
-        {
-            output += this.items[i];
-            if (i != this.length-1)
-            {
-            output += ", ";
-            }
-        }
-        output += "]";
-        return output;
     }
     public int Size()
     {
