@@ -21,3 +21,4 @@ Methods
 - .RemoveAt(index) -> Removes the item at a given index and returns True or False if the task was successful or not respectively. 
 - .Remove(item) -> Removes a given item and returns True or False if the task was successful or not respectively.
 - .Size() -> Returns the number of items in the array list. 
+- .GetItems() -> Returns the underlying data structure of the array list.
