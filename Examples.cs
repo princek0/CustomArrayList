@@ -22,6 +22,9 @@ namespace C_
             // Returns 1 since "2" is at index 1 in the array list. 
             Console.WriteLine(sample.IndexOf("2"));
             
+            // Returns "2" since "2" is at index 1 in the array list.
+            Console.WriteLine(sample.Get(1))
+            
             // Inserts "1.5" at index 1 in the array list (between items "1" and "2").
             sample.Insert("1.5", 1); 
             Console.WriteLine(sample.ToString());
@@ -35,7 +38,7 @@ namespace C_
             Console.WriteLine(sample.ToString());
             
             // Returns the number of items in the array list which is 4.
-            Console.WriteLine(sample.Size()); 
+            Console.WriteLine(sample.Size());
         }
     }
 }
